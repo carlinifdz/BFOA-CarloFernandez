@@ -203,7 +203,7 @@ class bacteria():
             mutatedBacteria_list[seq_index] = tuple(seq)
         return tuple(mutatedBacteria_list)
 
-    def refineMejorBacteria(self, bacteria, num_secuencias, probabilidad_mutacion=1, num_mutaciones_max=5):
+    def refineMejorBacteria(self, bacteria, num_secuencias, probabilidad_mutacion=0.5, num_mutaciones_max=5):
         bacteria_lista = [list(seq) for seq in bacteria]
         for i in range(num_secuencias):
             if random.random() < probabilidad_mutacion:
